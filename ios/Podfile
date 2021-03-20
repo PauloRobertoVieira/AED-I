@@ -8,6 +8,8 @@ target 'DigiWord' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'TextToSpeech', :path => '../node_modules/react-native-tts'
+
   target 'DigiWordTests' do
     inherit! :complete
     # Pods for testing
