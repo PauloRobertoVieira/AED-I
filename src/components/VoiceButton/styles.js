@@ -1,8 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  width: 100%;
-  height: 100%;
+  flex: 1;
   align-items: center;
   justify-content: center;
 `;
@@ -10,11 +9,11 @@ export const Container = styled.View`
 export const Button = styled.Pressable`
   width: ${(props) => `${props.width}px`};
   height: ${(props) => `${props.height}px`};
+  align-items: center;
+  justify-content: center;
   background-color: ${(props) => `${props.color}`};
   border: none;
   border-radius: 15px;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const Text = styled.Text`
