@@ -7,8 +7,8 @@ interface VoiceHandlerProviderProps {
 interface VoiceHandlerContextData {
   word: string;
   language: string | 'pt-br';
-  changeWord: (word: string) => void;
-  changeLanguage: (language: string) => void;
+  setWord: (word: string) => void;
+  setLanguage: (language: string) => void;
 }
 
 export const VoiceHandlerContext = createContext({} as VoiceHandlerContextData);
@@ -17,21 +17,13 @@ export function VoiceHandlerProvider({children}: VoiceHandlerProviderProps) {
   const [word, setWord] = useState('');
   const [language, setLanguage] = useState('');
 
-  function changeWord(word: string) {
-    setWord(word);
-  }
-
-  function changeLanguage(language: string) {
-    setLanguage(language);
-  }
-
   return (
     <VoiceHandlerContext.Provider
       value={{
         word,
         language,
-        changeWord,
-        changeLanguage,
+        setWord,
+        setLanguage,
       }}>
       {children}
     </VoiceHandlerContext.Provider>

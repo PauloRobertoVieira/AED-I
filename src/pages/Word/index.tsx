@@ -1,15 +1,14 @@
 import React from 'react';
 import VoiceButton from '../../components/VoiceButton';
-import {VoiceHandlerProvider} from '../../contexts/VoiceHandlerContext';
 
-import {Container} from './styles';
+import {Container, VoiceHandler} from './styles';
 
 export default function Word() {
   return (
-    <VoiceHandlerProvider>
-      <Container>
+    <Container>
+      <VoiceHandler>
         <VoiceButton />
-      </Container>
-    </VoiceHandlerProvider>
+      </VoiceHandler>
+    </Container>
   );
 }
