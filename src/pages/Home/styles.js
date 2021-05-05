@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import fonts from '../../../public/styles/fonts';
 
 export const Container = styled.View`
   flex: 1;
@@ -8,6 +9,12 @@ export const Brand = styled.View`
   flex: 0.5;
   align-items: center;
   justify-content: center;
+`;
+
+export const BrandText = styled.Text`
+  font-family: ${fonts.heading};
+  font-size: ${(props) => `${props.size}px`};
+  color: ${(props) => `${props.color}`};
 `;
 
 export const Menu = styled.View`
@@ -27,6 +34,7 @@ export const Button = styled.Pressable`
 `;
 
 export const Text = styled.Text`
+  font-family: ${fonts.text};
   font-size: ${(props) => `${props.size}px`};
   color: ${(props) => `${props.color}`};
 `;

@@ -1,24 +1,15 @@
-import React, {useContext, useEffect, useState} from 'react';
-import Tts from 'react-native-tts';
+import React, {useContext} from 'react';
 import {VoiceHandlerContext} from '../../contexts/VoiceHandlerContext';
 
 import {Button, Container, Text} from './styles';
+import colors from '../../../public/styles/colors';
+import fonts from '../../../public/styles/fonts';
 
 export default function VoiceButton() {
-  const {word, language} = useContext(VoiceHandlerContext);
-  const [isExecuting, setIsExecuting] = useState(false);
-
-  useEffect(() => {
-    if (language !== undefined && language.length !== 0) {
-      Tts.setDefaultLanguage(language);
-    }
-  }, [language]);
+  const {word, tts} = useContext(VoiceHandlerContext);
 
   function handleVoice() {
-    Tts.getInitStatus().then(() => Tts.speak(word));
-    Tts.addEventListener('tts-start', () => setIsExecuting(true));
-    Tts.addEventListener('tts-finish', () => setIsExecuting(false));
-    Tts.addEventListener('tts-cancel', () => setIsExecuting(false));
+    tts.getInitStatus().then(() => tts.speak(word));
   }
 
   return (
@@ -26,13 +17,12 @@ export default function VoiceButton() {
       <Button
         width={255}
         height={255}
-        color={'red'}
+        color={colors.button}
         onPress={() => {
-          if (!isExecuting) {
-            handleVoice();
-          }
+          tts.stop();
+          handleVoice();
         }}>
-        <Text size={22} color={'white'}>
+        <Text size={fonts.medium} color={colors.white}>
           Voice Button
         </Text>
       </Button>
