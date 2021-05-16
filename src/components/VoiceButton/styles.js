@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import fonts from '../../../public/styles/fonts';
 
 export const Container = styled.View`
   flex: 1;
@@ -17,6 +18,7 @@ export const Button = styled.Pressable`
 `;
 
 export const Text = styled.Text`
+  font-family: ${fonts.text};
   font-size: ${(props) => `${props.size}px`};
   color: ${(props) => `${props.color}`};
 `;
