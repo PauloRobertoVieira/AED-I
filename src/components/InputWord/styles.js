@@ -1,9 +1,10 @@
 import styled from 'styled-components/native';
-import fonts from '../../../public/styles/fonts';
+import colors from '../../assets/styles/colors';
+import fonts from '../../assets/styles/fonts';
 
 export const Container = styled.View`
   width: 95%;
-  height: 50px;
+  height: 60px;
   align-items: center;
   position: relative;
 `;
@@ -13,7 +14,7 @@ export const Input = styled.TextInput`
   border: 1px black solid;
   border-radius: 5px;
   font-family: ${fonts.text};
-  text-align-vertical: auto;
+  text-align-vertical: center;
   padding-horizontal: 15px;
   letter-spacing: 2px;
   font-size: ${(props) => `${props.size}px`};
@@ -31,11 +32,11 @@ export const SubmitButton = styled.Pressable`
   position: absolute;
   top: 50%;
   right: 6px;
-  transform: translateY(-19px);
+  transform: translateY(-24.5px);
 `;
 
-export const Text = styled.Text`
-  font-family: ${fonts.text};
-  font-size: ${(props) => `${props.size}px`};
-  color: ${(props) => `${props.color}`};
+export const Image = styled.Image`
+  width: 32px;
+  height: 32px;
+  tint-color: ${colors.microfone};
 `;

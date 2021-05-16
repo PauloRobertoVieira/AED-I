@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import fonts from '../../../public/styles/fonts';
+import fonts from '../../assets/styles/fonts';
 
 export const Container = styled.View`
   flex: 1;
@@ -12,8 +12,8 @@ export const Brand = styled.View`
 `;
 
 export const BrandText = styled.Text`
+  text-align: center;
   font-family: ${fonts.heading};
-  font-size: ${(props) => `${props.size}px`};
   color: ${(props) => `${props.color}`};
 `;
 

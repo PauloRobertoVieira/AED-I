@@ -1,10 +1,11 @@
 import React, {useContext, useState} from 'react';
 import {Alert} from 'react-native';
-import colors from '../../../public/styles/colors';
-import fonts from '../../../public/styles/fonts';
 import {VoiceHandlerContext} from '../../contexts/VoiceHandlerContext';
 
-import {Container, Input, SubmitButton, Text} from './styles';
+import {Container, Image, Input, SubmitButton} from './styles';
+import colors from '../../assets/styles/colors';
+import fonts from '../../assets/styles/fonts';
+import images from '../../assets/styles/images';
 
 export default function VoiceButton() {
   const [text, onChangeText] = useState('');
@@ -32,9 +33,7 @@ export default function VoiceButton() {
         placeholder="Palavra"
       />
       <SubmitButton onPress={submit}>
-        <Text size={fonts.medium} color={colors.white}>
-          Submit
-        </Text>
+        <Image source={images.send} />
       </SubmitButton>
     </Container>
   );
