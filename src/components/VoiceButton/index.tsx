@@ -15,8 +15,8 @@ export default function VoiceButton() {
   return (
     <Container>
       <Button
-        width={255}
-        height={255}
+        width={200}
+        height={200}
         color={colors.button}
         onPress={() => {
           tts.stop();

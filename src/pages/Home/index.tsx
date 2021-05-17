@@ -2,15 +2,20 @@ import React from 'react';
 import {BackHandler} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import {Container, Button, Text, Menu, Brand, BrandText} from './styles';
+import {Container, ImageBackground, Button, Text, Menu, Brand, BrandText} from './styles';
 import colors from '../../../public/styles/colors';
 import fonts from '../../../public/styles/fonts';
+
+const fundo = '../../assets/fundo.png';
 
 export default function Home() {
   const navigation = useNavigation();
 
   return (
     <Container>
+            <ImageBackground
+      source={require(fundo)}
+      >
       <Brand>
         <BrandText size={fonts.xlarge} color={colors.heading}>
           Digi Word
@@ -33,6 +38,7 @@ export default function Home() {
           </Text>
         </Button>
       </Menu>
+      </ImageBackground>
     </Container>
   );
 }
