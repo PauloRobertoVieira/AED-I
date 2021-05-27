@@ -9,15 +9,12 @@ import {Container, Input, SubmitButton, Text} from './styles';
 export default function VoiceButton() {
   const [text, onChangeText] = useState('');
   const {word, changeWord} = useContext(VoiceHandlerContext);
-  const [, setIsWord] = useState(false);
 
   function submit() {
     if (text.toLowerCase() === word.toLowerCase()) {
-      setIsWord(true);
       onChangeText('');
       changeWord();
       Alert.alert(`Você acertou a palavra ${word}`);
-      setIsWord(false);
     } else {
       Alert.alert('Você errou a palavra');
     }

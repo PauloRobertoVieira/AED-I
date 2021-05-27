@@ -7,7 +7,7 @@ export const Container = styled.View`
   justify-content: center;
 `;
 
-export const Button = styled.Pressable`
+export const Button = styled.TouchableOpacity`
   width: ${(props) => `${props.width}px`};
   height: ${(props) => `${props.height}px`};
   align-items: center;
