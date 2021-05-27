@@ -1,6 +1,9 @@
 export default {
   background: '#FFFFFF',
   button: '#FF0000',
+  microfone: '#FFFFFF',
+  send: '#FFFFFF',
+  edit: '#FFFFFF',
 
   white: '#FFFFFF',
   black: '#000000',

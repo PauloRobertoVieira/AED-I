@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import {VoiceHandlerContext} from '../../contexts/VoiceHandlerContext';
 
-import {Button, Container, Text} from './styles';
-import colors from '../../../public/styles/colors';
-import fonts from '../../../public/styles/fonts';
+import {Button, Container, Image} from './styles';
+import colors from '../../assets/styles/colors';
+import images from '../../assets/styles/images';
 
 export default function VoiceButton() {
   const {word, tts} = useContext(VoiceHandlerContext);
@@ -22,9 +22,7 @@ export default function VoiceButton() {
           tts.stop();
           handleVoice();
         }}>
-        <Text size={fonts.medium} color={colors.white}>
-          Voice Button
-        </Text>
+        <Image source={images.microfone} />
       </Button>
     </Container>
   );

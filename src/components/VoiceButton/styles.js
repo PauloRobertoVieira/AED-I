@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import fonts from '../../../public/styles/fonts';
+import colors from '../../assets/styles/colors';
 
 export const Container = styled.View`
   flex: 1;
@@ -17,8 +17,9 @@ export const Button = styled.TouchableOpacity`
   border-radius: 15px;
 `;
 
-export const Text = styled.Text`
-  font-family: ${fonts.text};
-  font-size: ${(props) => `${props.size}px`};
-  color: ${(props) => `${props.color}`};
+export const Image = styled.Image`
+  width: 75px;
+  height: 90px;
+  resize-mode: stretch;
+  tint-color: ${colors.microfone};
 `;

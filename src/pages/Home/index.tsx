@@ -3,8 +3,8 @@ import {BackHandler} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {Container, Button, Text, Menu, Brand, BrandText} from './styles';
-import colors from '../../../public/styles/colors';
-import fonts from '../../../public/styles/fonts';
+import colors from '../../assets/styles/colors';
+import fonts from '../../assets/styles/fonts';
 
 export default function Home() {
   const navigation = useNavigation();
@@ -12,8 +12,14 @@ export default function Home() {
   return (
     <Container>
       <Brand>
-        <BrandText size={fonts.xlarge} color={colors.heading}>
-          Digi Word
+        <BrandText>
+          <Text size={64} color={colors.heading}>
+            Digi
+          </Text>
+          {'\n'}
+          <Text size={96} color={colors.heading}>
+            Word
+          </Text>
         </BrandText>
       </Brand>
       <Menu>
